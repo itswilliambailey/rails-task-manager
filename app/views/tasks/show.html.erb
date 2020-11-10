@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<%= form_for(@task) do |f| %>
+  <div class="field">
+    <%= f.label "Task Status" %> <br />
+    <%= f.check_box :completed %> <br />
+  </div>
+<% end %>
+<h2><%= link_to "Go back to My Tasks", tasks_path %></h2>
+<h3><%= link_to "Edit a task", edit_path %></h3>
